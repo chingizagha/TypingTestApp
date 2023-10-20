@@ -1,0 +1,18 @@
+
+.word-box{
+    margin: 10px;
+}
+
+.div-word{
+    margin: 30px;
+    height: 100px;
+    width: 600px;
+    background-color: #fff;
+    height: 100%;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    overflow: hidden;
+}
+
