@@ -106,7 +106,7 @@ let timerExecuted = false;
 let timeBoxColor = false;
 wordSpan[i].style.backgroundColor = '#ddd';
 
-inputPlace.addEventListener('keydown', function(e)
+inputPlace.addEventListener('keyup', function(e)
 {
     if(e.key === ' '){
         if(wordsSet[i] === inputPlace.value.trim()){
@@ -119,12 +119,26 @@ inputPlace.addEventListener('keydown', function(e)
             wordSpan[i].style.color = 'red';
             wordSpan[i].style.backgroundColor = '#fff';
         }
-    wordSpan[i+1].style.backgroundColor = '#ddd';
 
+            
+    wordSpan[i+1].style.backgroundColor = '#ddd';
     inputPlace.value = '';
     ++i;
     }
 });
+
+inputPlace.addEventListener('input', checkValue);
+
+function checkValue(e){
+    if(e.target.value != wordsSet[i].substring(0, e.target.value.length)){
+        wordSpan[i].style.color = 'red';
+        wordSpan[i].style.backgroundColor = '#ddd';
+    }
+    if(e.target.value == wordsSet[i].substring(0, e.target.value.length)){
+        wordSpan[i].style.color = '#000';
+        wordSpan[i].style.backgroundColor = '#ddd';
+    }
+}
 
 inputPlace.addEventListener('input', runFunctionOnce);
 
@@ -140,7 +154,6 @@ function setTimer(){
             clearInterval(timer);
             console.log(count / (time/60));
         }
-
         time--;
     };
 
@@ -173,6 +186,7 @@ btnReload.addEventListener('click', function(e){
     wordSpan.forEach((elem => {
         elem.style.color = 'black';
     }))
+    inputPlace.value = "";
     wordSpan[0].style.backgroundColor = '#ddd';
 })
 
@@ -189,3 +203,7 @@ timeBox.addEventListener('click', function(e){
     }
 
 })
+
+
+
+
