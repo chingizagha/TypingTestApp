@@ -1,411 +1,240 @@
-// 'use strict'
-// const wordsSet = [
-//     'do',
-//     'enough',
-//     'call',
-//     'follow',
-//     'keep',
-//     'will',
-//     'important',
-//     'seem',
-//     'or',
-//     'word',
-//     'him',
-//     'other',
-//     'letter',
-//     'look',
-//     'around',
-//     'too',
-//     'do',
-//     'enough',
-//     'call',
-//     'follow',
-//     'keep',
-//     'will',
-//     'important',
-//     'seem',
-//     'or',
-//     'word',
-//     'him',
-//     'other',
-//     'letter',
-//     'look',
-//     'around',
-//     'too',
-//     'do',
-//     'enough',
-//     'call',
-//     'follow',
-//     'keep',
-//     'will',
-//     'important',
-//     'seem',
-//     'or',
-//     'word',
-//     'him',
-//     'other',
-//     'letter',
-//     'look',
-//     'around',
-//     'too',
-//     'do',
-//     'enough',
-//     'call',
-//     'follow',
-//     'keep',
-//     'will',
-//     'important',
-//     'seem',
-//     'or',
-//     'word',
-//     'him',
-//     'other',
-//     'letter',
-//     'look',
-//     'around',
-//     'too',
-//     'do',
-//     'enough',
-//     'call',
-//     'follow',
-//     'keep',
-//     'will',
-//     'important',
-//     'seem',
-//     'or',
-//     'word',
-//     'him',
-//     'other',
-//     'letter',
-//     'look',
-//     'around',
-//     'too',
-// ];
-// let divWord = document.querySelector('.div-word')
-// function showWords(){
-//     divWord.innerHTML = ' ';
-//     for(let i=0; i<wordsSet.length; i++){
-//         const html = `<span class="word-box">${wordsSet[i]}</span>`
-
-//         divWord.insertAdjacentHTML('beforeend', html);
-//     }
-// }
-// showWords();
-
-
-
-
- 
-// let i = 0;
-// let count = 0;
-// let timer;
-// let timerExecuted = false;
-// let timeBoxColor = false;
-// wordSpan[i].style.backgroundColor = '#ddd';
-
-// inputPlace.addEventListener('keyup', function(e)
-// {
-//     if(e.key === ' '){
-//         if(wordsSet[i] === inputPlace.value.trim()){
-//             // scoreBox.textContent = `Score:${++count}`;
-//             wordSpan[i].style.backgroundColor = '#fff';
-//             wordSpan[i].style.color = 'green';
-
-//         }
-//         else if(wordsSet[i] != inputPlace.value.trim()){
-//             wordSpan[i].style.color = 'red';
-//             wordSpan[i].style.backgroundColor = '#fff';
-//         }
-
-            
-//     wordSpan[i+1].style.backgroundColor = '#ddd';
-//     inputPlace.value = '';
-//     ++i;
-//     }
-// });
-
-// inputPlace.addEventListener('input', checkValue);
-
-// function checkValue(e){
-//     if(e.target.value != wordsSet[i].substring(0, e.target.value.length)){
-//         wordSpan[i].style.color = 'red';
-//         wordSpan[i].style.backgroundColor = '#ddd';
-//     }
-//     if(e.target.value == wordsSet[i].substring(0, e.target.value.length)){
-//         wordSpan[i].style.color = '#000';
-//         wordSpan[i].style.backgroundColor = '#ddd';
-//     }
-// }
-
-// inputPlace.addEventListener('input', runFunctionOnce);
-
-// function setTimer(){
-//     function tick(){
-//         const min = Math.trunc(time/60);
-//         const sec = String(time % 60).padStart(2, 0);
-
-//         timeBox.textContent = `${min}:${sec}`;
-
-
-//         if(time === 0){
-//             clearInterval(timer);
-//             console.log(count / (time/60));
-//         }
-//         time--;
-//     };
-
-//     let time = 60;
-
-//     tick();
-//     const timer = setInterval(tick, 1000);
-
-//     return timer;
-// };
-
-// function runFunctionOnce() {
-//     if (!timerExecuted) {
-//         if(timer) clearInterval(timer)
-//         timer = setTimer();
-//         timerExecuted = true;
-//     }
-// };
-
-// btnReload.addEventListener('click', function(e){
-//     e.preventDefault();
-
-//     if(timer) clearInterval(timer)
-//     wordSpan[i].style.backgroundColor = '#fff';
-//     timerExecuted = false;
-//     i = 0;
-//     count = 0;
-//     timeBox.textContent = '1:00';
-//     // scoreBox.textContent = 'Score:'
-//     wordSpan.forEach((elem => {
-//         elem.style.color = 'black';
-//     }))
-//     inputPlace.value = "";
-//     wordSpan[0].style.backgroundColor = '#ddd';
-// })
-
-// timeBox.addEventListener('click', function(e){
-//     e.preventDefault();
-
-//     if(!timeBoxColor){
-//         timeBox.style.color = "#177D4E";
-//         timeBoxColor = true;
-//     } 
-//     else{
-//         timeBox.style.color = "white";
-//         timeBoxColor = false;
-//     }
-// })
-
+'use strict'
+const wordsSet = [
+    'do',
+    'enough',
+    'call',
+    'follow',
+    'keep',
+    'will',
+    'important',
+    'seem',
+    'or',
+    'word',
+    'him',
+    'other',
+    'letter',
+    'look',
+    'around',
+    'too',
+    'do',
+    'enough',
+    'call',
+    'follow',
+    'keep',
+    'will',
+    'important',
+    'seem',
+    'or',
+    'word',
+    'him',
+    'other',
+    'letter',
+    'look',
+    'around',
+    'too',
+    'do',
+    'enough',
+    'call',
+    'follow',
+    'keep',
+    'will',
+    'important',
+    'seem',
+    'or',
+    'word',
+    'him',
+    'other',
+    'letter',
+    'look',
+    'around',
+    'too',
+    'do',
+    'enough',
+    'call',
+    'follow',
+    'keep',
+    'will',
+    'important',
+    'seem',
+    'or',
+    'word',
+    'him',
+    'other',
+    'letter',
+    'look',
+    'around',
+    'too',
+    'do',
+    'enough',
+    'call',
+    'follow',
+    'keep',
+    'will',
+    'important',
+    'seem',
+    'or',
+    'word',
+    'him',
+    'other',
+    'letter',
+    'look',
+    'around',
+    'too',
+];
 let divWord = document.querySelector('.div-word')
+function showWords(){
+    fetch("https://random-words-api.vercel.app/word", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "54c13cbeb8msh05768ef5da7c7a4p132975jsn9727f17e4753",
+            "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+    }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+
+
+    divWord.innerHTML = ' ';
+    for(let i=0; i<wordsSet.length; i++){
+        const html = `<span class="word-box">${wordsSet[i]}</span>`
+        divWord.insertAdjacentHTML('beforeend', html);
+    }
+}
+showWords();
 let wordSpan = document.querySelectorAll('.word-box')
 let inputPlace = document.querySelector('.input-place')
 let btnReload = document.querySelector('.btn-reload')
 let scoreBox = document.querySelector('.score-box')
 let timeBox = document.querySelector(".timer-box")
-
+let divResult = document.querySelector('.div-result')
+ 
+let isReloaded = false;
 let i = 0;
 let count = 0;
 let timer;
 let timerExecuted = false;
 let timeBoxColor = false;
+wordSpan[i].style.backgroundColor = '#ddd';
 
-class App {
-
-    wordsSet = [
-        'do',
-        'enough',
-        'call',
-        'follow',
-        'keep',
-        'will',
-        'important',
-        'seem',
-        'or',
-        'word',
-        'him',
-        'other',
-        'letter',
-        'look',
-        'around',
-        'too',
-        'do',
-        'enough',
-        'call',
-        'follow',
-        'keep',
-        'will',
-        'important',
-        'seem',
-        'or',
-        'word',
-        'him',
-        'other',
-        'letter',
-        'look',
-        'around',
-        'too',
-        'do',
-        'enough',
-        'call',
-        'follow',
-        'keep',
-        'will',
-        'important',
-        'seem',
-        'or',
-        'word',
-        'him',
-        'other',
-        'letter',
-        'look',
-        'around',
-        'too',
-        'do',
-        'enough',
-        'call',
-        'follow',
-        'keep',
-        'will',
-        'important',
-        'seem',
-        'or',
-        'word',
-        'him',
-        'other',
-        'letter',
-        'look',
-        'around',
-        'too',
-        'do',
-        'enough',
-        'call',
-        'follow',
-        'keep',
-        'will',
-        'important',
-        'seem',
-        'or',
-        'word',
-        'him',
-        'other',
-        'letter',
-        'look',
-        'around',
-        'too',
-    ];
-    constructor(){
-        this._showWords();
-
-        btnReload.addEventListener('click', this._reload.bind(this));
-        timeBox.addEventListener('click', this._timeBoxHide.bind(this));
-        inputPlace.addEventListener('keyup', this._spaceButton.bind(this));
-        inputPlace.addEventListener('input', this._checkValue.bind(this));
-        inputPlace.addEventListener('input', this._runFunctionOnce);
+inputPlace.addEventListener('keyup', function(e){
+    if(e.target.value != wordsSet[i].substring(0, e.target.value.length)){
+        wordSpan[i].style.color = 'red';
+        wordSpan[i].style.backgroundColor = '#ddd';
+    }
+    if(e.target.value == wordsSet[i].substring(0, e.target.value.length)){
+        wordSpan[i].style.color = '#000';
+        wordSpan[i].style.backgroundColor = '#ddd';
     }
 
-    _showWords(){
-        divWord.innerHTML = ' ';
-        for(let i=0; i<this.wordsSet.length; i++){
-            const html = `<span class="word-box">${this.wordsSet[i]}</span>`
-
-            divWord.insertAdjacentHTML('beforeend', html);
+    if(e.target.value.includes(' ') && inputPlace.value.length > 0){
+        if(wordsSet[i] === inputPlace.value.trim()){
+            ++count;
+            wordSpan[i].style.backgroundColor = '#fff';
+            wordSpan[i].style.color = 'green';
+            wordSpan[i+1].style.backgroundColor = '#ddd';
+            inputPlace.value = '';
+            ++i;
         }
-    }
-
-    _reload(){
-        if(timer) clearInterval(timer)
-        wordSpan[i].style.backgroundColor = '#fff';
-        timerExecuted = false;
-        i = 0;
-        count = 0;
-        timeBox.textContent = '1:00';
-        // scoreBox.textContent = 'Score:'
-        wordSpan.forEach((elem => {
-            elem.style.color = 'black';
-        }))
-        inputPlace.value = "";
-        wordSpan[0].style.backgroundColor = '#ddd';
-    }
-
-    _timeBoxHide(){
-
-        if(!timeBoxColor){
-            timeBox.style.color = "#177D4E";
-            timeBoxColor = true;
-        } 
-        else{
-            timeBox.style.color = "white";
-            timeBoxColor = false;
-        }
-    }
-    _spaceButton(e){
-        if(e.key === ' '){
-            if(this.wordsSet[i] === inputPlace.value.trim()){
-                // scoreBox.textContent = `Score:${++count}`;
-                wordSpan[i].style.backgroundColor = '#fff';
-                wordSpan[i].style.color = 'green';
-    
-            }
-            else if(this.wordsSet[i] != inputPlace.value.trim()){
-                wordSpan[i].style.color = 'red';
-                wordSpan[i].style.backgroundColor = '#fff';
-            }
-    
-                
-        wordSpan[i ++].style.backgroundColor = '#ddd';
-        inputPlace.value = '';
-        ++i;
-        }
-    }
-
-    _checkValue(e){
-        if(e.target.value != this.wordsSet[i].substring(0, e.target.value.length)){
+        else if(wordsSet[i] != inputPlace.value.length > 0){
             wordSpan[i].style.color = 'red';
-            wordSpan[i].style.backgroundColor = '#ddd';
-        }
-        if(e.target.value == this.wordsSet[i].substring(0, e.target.value.length)){
-            wordSpan[i].style.color = '#000';
-            wordSpan[i].style.backgroundColor = '#ddd';
+            wordSpan[i].style.backgroundColor = '#fff';
+            wordSpan[i+1].style.backgroundColor = '#ddd';
+            inputPlace.value = '';
+            ++i;
         }
     }
+    if(e.target.value.includes(' ') && inputPlace.value.length == 0)
+    {
+        inputPlace.value = '';
+        return;
+    }
+});
 
-    _setTimer(){
-        function tick(){
-            const min = Math.trunc(time/60);
-            const sec = String(time % 60).padStart(2, 0);
-    
-            timeBox.textContent = `${min}:${sec}`;
-    
-            if(time === 0){
-                clearInterval(timer);
-                console.log(count / (time/60));
-            }
-            time--;
-        };
-    
-        let time = 60;
-    
-        tick();
-        timer = setInterval(tick, 1000);
-    
-        return timer;
-    }
+inputPlace.addEventListener('input', runFunctionOnce);
 
-    _runFunctionOnce() {
-        if (!timerExecuted) {
-            if(timer) clearInterval(timer)
-            timer = _setTimer();
-            timerExecuted = true;
+function setTimer(){
+    function tick(){
+        const min = Math.trunc(time/60);
+        const sec = String(time % 60).padStart(2, 0);
+        timeBox.textContent = `${min}:${sec}`;
+        if(time === 0){
+            clearInterval(timer);
+            isReloaded = false;
+            showResult();
+            console.log(count / (time/60));
         }
+
+        time--;
+    };
+
+    let time = 10;
+    tick();
+    const timer = setInterval(tick, 1000);
+    return timer;
+};
+
+//Executing time for first time
+function runFunctionOnce() {
+    if (!timerExecuted) {
+        if(timer) clearInterval(timer)
+        timer = setTimer();
+        timerExecuted = true;
     }
+};
+
+function showResult() {
+    if(isReloaded){
+        inputPlace.disabled = false;
+        divWord.style.display = 'block';
+        divResult.style.display = 'none';
+    }
+    if(!isReloaded){
+        divResult.innerHTML = '';
+        const html = `Result: ${count}`;
+        divResult.insertAdjacentHTML('beforeend', html);
+        inputPlace.disabled = true;
+        divWord.style.display = 'none';
+        divResult.style.display = 'block';    
+    }
+    
 }
 
-const app = new App();
+//Button for reloading everything
+btnReload.addEventListener('click', function(e){
+    e.preventDefault();
+    if(timer) clearInterval(timer)
+    wordSpan[i].style.backgroundColor = '#fff';
+    timerExecuted = false;
+    i = 0;
+    count = 0;
+    timeBox.textContent = '1:00';
+    // scoreBox.textContent = 'Score:'
+    wordSpan.forEach((elem => {
+        elem.style.color = 'black';
+    }))
+    inputPlace.value = "";
+    wordSpan[0].style.backgroundColor = '#ddd';
+    isReloaded = true;
+    showResult();
+})
+//Button for hiding time in box
+timeBox.addEventListener('click', function(e){
+    e.preventDefault();
+    if(!timeBoxColor){
+        timeBox.style.color = "#177D4E";
+        timeBoxColor = true;
+    } 
+    else{
+        timeBox.style.color = "white";
+        timeBoxColor = false;
+    }
 
-
+})
 
 

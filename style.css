@@ -15,4 +15,7 @@
     hyphens: auto;
     overflow: hidden;
 }
+.div-result {
+    display: none;
+}
 
